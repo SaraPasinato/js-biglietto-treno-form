@@ -12,3 +12,9 @@
 .bg-bordaux{
     background-color: #b91450;
 }
+
+#form-items .form-control:focus,
+#form-items .form-select:focus{
+  border-color: rgb(185, 20, 80);
+  box-shadow: 0 0 0 .25rem rgba(185,20,80,.25);
+}
