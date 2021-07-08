@@ -1,3 +1,4 @@
+
 #section-form{
     min-height: 30vh;
     max-width: 80%;
@@ -5,9 +6,19 @@
     box-shadow: 2px 5px 20px #000;
 }
 
+#section-preview{
+    min-height: 30vh;
+    max-width: 80%;
+}
+
+
 #btns-form,
 #form-items{
    min-height: 15vh;
+}
+
+#ticket-details{
+    min-height: 20vh;
 }
 .bg-bordaux{
     background-color: #b91450;
