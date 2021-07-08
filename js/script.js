@@ -22,32 +22,51 @@
  * Aggiungiamo una funzione che ci permetta di resettare i campi del form ai valori originali.
  */
 // ? 1: Inizializzo elementi sezione form
-var fullName= document.getElementById('fullName');
-var kms=document.getElementById('kms');
-var dicountAge=document.getElementById('age');
-var btnInsert=document.getElementById('btn-insert');
-var btnReset=document.getElementById('btn-reset');
+
+var fullName = document.getElementById('full-name');
+var kms = document.getElementById('kms');
+var discountAge = document.getElementById('age');
+var btnInsert = document.getElementById('btn-insert');
+var btnReset = document.getElementById('btn-reset');
 
 
 
 //? 2: Inizializzo elementi sezione ticket
-var passenger=document.getElementById("passenger");
-var discount=document.getElementById("discount");
-var car=document.getElementById("car");
-var car=document.getElementById("cap");
-var result=document.getElementById("result");
+var passenger = document.getElementById("passenger");
+var discount = document.getElementById("discount");
+var car = document.getElementById("car");
+var cap = document.getElementById("cap");
+var result = document.getElementById("result");
 
 //? 3: aggiungo listener event  al click del mio btn
-btnInsert.addEventListener('click',function(){
+btnInsert.addEventListener('click', function () {
 
-//** recupero i valori dal form */
+    //** recupero i valori dal form */
+    var valueName = fullName.value;
+    var valueKms = kms.value;
+    var valueDiscountAge = discountAge.value;
 
+    //debug inline
+    console.log(valueName);
+    console.log(valueKms);
+    console.log(valueDiscountAge);
 
+    //** Calcolo il biglietto */
 
+    var price=0.21* valueKms;
+    var msgDiscount='tariffa ordinaria';
 
+    if (valueDiscountAge==="under"){
+        price -= (price*20)/100;
+        msgDiscount='Tariffa minori -- sconto 20%';
+    }
 
-
-
+    if (valueDiscountAge==="over"){
+        price -= (price*40)/100;
+        msgDiscount='Tariffa over 65 -- sconto 40%';
+    }
+    //debug inline
+    console.log(price, msgDiscount);
 
 
 

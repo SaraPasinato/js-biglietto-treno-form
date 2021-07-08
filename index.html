@@ -26,7 +26,7 @@
     <main id="main-ticket">
         <section id="section-form" class="container-sm bg-light mt-4 text-center">
             <div id="form-items" class="row justify-content-around align-content-center pt-4">
-                <div class="col-4 ">
+                <div class="col-4">
                     <!-- first form element Nome Cognome -->
                     <label for="full-name">Nome Cognome</label>
                     <input id="full-name" type="text" class="form-control mt-1">
@@ -39,17 +39,17 @@
                 <div class="col-4">
                     <!-- thrid form element fascie d'età -->
                     <label for="age"> Fascia d'età</label>
-                    <select class="form-select mt-1" id="age">
-                        <option selected value="under">Minorenne - sconto 20%</option>
-                        <option value="adult">Adulto - tariffa base</option>
-                        <option value="over">Over 65 - sconto 40%</option>
+                    <select id="age" class="form-select mt-1">
+                        <option selected value="under"> Minorenne - sconto 20%</option>
+                        <option value="adult"> Adulto - tariffa base</option>
+                        <option value="over"> Over 65 - sconto 40%</option>
                     </select>
                 </div>
             </div>
             <div id="btns-form" class="row pt-5">
                 <div class="col-12 ">
                     <!-- btns -->
-                   <button id="btn-insert " class="btn btn-outline-danger btn-lg">Genera</button>
+                   <button id="btn-insert" class="btn btn-outline-danger btn-lg">Genera</button>
                    <button id="btn-reset" class="btn btn-outline-danger btn-lg">Annulla</button>
                 </div>
             </div>
