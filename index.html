@@ -24,23 +24,31 @@
     </header>
 
     <main id="main-ticket">
-        <section id="section-form" class="container-sm bg-light mt-3">
-            <div id="form-items" class="row justify-content-around">
-                <div class="col-4">
-                    //first form elemnt
+        <section id="section-form" class="container-sm bg-light mt-3 text-center">
+            <div id="form-items" class="row justify-content-around align-content-center">
+                <div class="col-4 ">
+                    <!-- //first form element Nome Cognome -->
+                    <label for="full-name">Nome Cognome</label>
+                    <input id="full-name" type="text" class="form-control mt-1">
                 </div>
                 <div class="col-4">
-                    //first form elemnt
-
+                    <!-- //second form element km da percorrere -->
+                    <label for="kms">Km da percorrere</label>
+                    <input id="kms" type="number" class="form-control mt-1" value="10" min="10">
                 </div>
                 <div class="col-4">
-                    //first form elemnt
-
+                    <!-- //thrid form element fasci età -->
+                    <label for="age"> Fascia d'età</label>
+                    <select class="form-select mt-1" id="age">
+                        <option selected value="under">Minorenne - sconto 20%</option>
+                        <option value="adult">Adulto - tariffa base</option>
+                        <option value="over">Over 65 - sconto 40%</option>
+                    </select>
                 </div>
             </div>
             <div id="btns-form" class="row">
                 <div class="col-12">
-                    //btn
+                    <!-- //btn -->
                 </div>
             </div>
 
