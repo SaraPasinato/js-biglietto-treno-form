@@ -1,4 +1,4 @@
-
+/* main */
 #section-form{
     min-height: 30vh;
     max-width: 80%;
@@ -11,15 +11,20 @@
     max-width: 80%;
 }
 
-
 #btns-form,
 #form-items{
    min-height: 15vh;
 }
-
 #ticket-details{
     min-height: 20vh;
 }
+
+.hidden{
+    visibility: hidden;
+}
+
+/* style btn  && background*/
+
 .bg-bordaux{
     background-color: #b91450;
 }
@@ -29,3 +34,4 @@
   border-color: rgb(185, 20, 80);
   box-shadow: 0 0 0 .25rem rgba(185,20,80,.25);
 }
+

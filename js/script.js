@@ -32,13 +32,15 @@ var btnReset = document.getElementById('btn-reset');
 
 
 //? 2: Inizializzo elementi sezione ticket
+var header = document.getElementById("sub-header");
+var preview = document.getElementById("section-preview");
 var passenger = document.getElementById("passenger");
 var discount = document.getElementById("discount");
 var car = document.getElementById("car");
 var cap = document.getElementById("cap");
 var result = document.getElementById("result");
 
-//? 3: aggiungo listener event  al click del mio btn
+//? 3: aggiungo listener event  al click del mio btn insert
 btnInsert.addEventListener('click', function () {
 
     //** recupero i valori dal form */
@@ -53,30 +55,45 @@ btnInsert.addEventListener('click', function () {
 
     //** Calcolo il biglietto */
 
-    var price=0.21* valueKms;
-    var msgDiscount='tariffa ordinaria';
-    var carRandom= Math.floor(Math.random()*10)+1;
+    var price = 0.21 * valueKms;
+    var msgDiscount = 'tariffa ordinaria';
+    var carRandom = Math.floor(Math.random() * 10) + 1;
 
-    if (valueDiscountAge==="under"){
-        price -= (price*20)/100;
-        msgDiscount='Tariffa minori -- sconto 20%';
+    if (valueDiscountAge === "under") {
+        price -= (price * 20) / 100;
+        msgDiscount = 'Tariffa minori -- sconto 20%';
     }
 
-    if (valueDiscountAge==="over"){
-        price -= (price*40)/100;
-        msgDiscount='Tariffa over 65 -- sconto 40%';
+    if (valueDiscountAge === "over") {
+        price -= (price * 40) / 100;
+        msgDiscount = 'Tariffa over 65 -- sconto 40%';
     }
     //debug inline
     console.log(price, msgDiscount);
 
-    price= "€ "+ price.toFixed(2);
+    price = "€ " + price.toFixed(2);
 
     // TODO codice treno 
 
     //** Stampo gli inner text in html */
-    passenger.innerText=valueName;
-    discount.innerText=msgDiscount;
-    car.innerText=carRandom;
-    result.innerText=price;
+    passenger.innerText = valueName;
+    discount.innerText = msgDiscount;
+    car.innerText = carRandom;
+    result.innerText = price;
 
+    // ** Rendo visibile la sezione ticket in pagina  */
+    preview.classList.remove('hidden');
+    header.classList.remove('hidden');
+});
+
+
+//? 4: aggiungo listener event  al click del mio btn reset
+
+btnReset.addEventListener("click", function () {
+    fullName.value = "";
+    discountAge.value = "adult";
+    kms.value = "10";
+    // ** Rendo nascosta la sezione ticket in pagina  */
+    preview.classList.add('hidden');
+    header.classList.add('hidden');
 });
