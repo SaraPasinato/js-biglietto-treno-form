@@ -1,0 +1,14 @@
+#section-form{
+    min-height: 30vh;
+    max-width: 80%;
+    border-radius:10px;
+    box-shadow: 2px 5px 20px #000;
+}
+
+#btns-form,
+#form-items{
+   min-height: 15vh;
+}
+.bg-bordaux{
+    background-color: #b91450;
+}
