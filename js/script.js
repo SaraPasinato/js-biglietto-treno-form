@@ -58,6 +58,8 @@ btnInsert.addEventListener('click', function () {
     var price = 0.21 * valueKms;
     var msgDiscount = 'tariffa ordinaria';
     var carRandom = Math.floor(Math.random() * 12) + 1;
+    var capRandom = Math.floor(Math.random()* (99999 -1)+1);
+    console.log(capRandom);
 
     if (valueDiscountAge === "under") {
         price -= (price * 20) / 100;
@@ -73,15 +75,13 @@ btnInsert.addEventListener('click', function () {
 
     price = "€ " + price.toFixed(2);
 
-    // TODO codice treno
-
 
     //** Stampo gli inner text in html */
     passenger.innerText = valueName;
     discount.innerText = msgDiscount;
     car.innerText = carRandom;
     result.innerText = price;
-
+    cap.innerText=capRandom;
     // ** Rendo visibile la sezione ticket in pagina  */
     preview.classList.remove('hidden');
     header.classList.remove('hidden');
