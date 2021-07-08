@@ -55,6 +55,7 @@ btnInsert.addEventListener('click', function () {
 
     var price=0.21* valueKms;
     var msgDiscount='tariffa ordinaria';
+    var carRandom= Math.floor(Math.random()*10)+1;
 
     if (valueDiscountAge==="under"){
         price -= (price*20)/100;
@@ -68,8 +69,14 @@ btnInsert.addEventListener('click', function () {
     //debug inline
     console.log(price, msgDiscount);
 
+    price= "€ "+ price.toFixed(2);
 
+    // TODO codice treno 
 
-
+    //** Stampo gli inner text in html */
+    passenger.innerText=valueName;
+    discount.innerText=msgDiscount;
+    car.innerText=carRandom;
+    result.innerText=price;
 
 });
