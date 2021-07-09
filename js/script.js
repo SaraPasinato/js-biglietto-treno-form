@@ -58,7 +58,7 @@ btnInsert.addEventListener('click', function () {
     var price = 0.21 * valueKms;
     var msgDiscount = 'tariffa ordinaria';
     var carRandom = Math.floor(Math.random() * 12) + 1;
-    var capRandom = Math.floor(Math.random() * (99999 - 1) + 1);
+    var capRandom = Math.floor(Math.random() * (100000 - 90000) + 90000);
     console.log(capRandom);
 
     if (valueDiscountAge === "under") {
